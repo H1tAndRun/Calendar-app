@@ -1,0 +1,19 @@
+my:
+  db:
+    url: jdbc:postgresql://localhost:5432/CalendarDb
+
+spring:
+  datasource:
+    url: ${my.db.url}
+    username: postgres
+    password: 556677
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+
